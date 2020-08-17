@@ -294,7 +294,7 @@ int  getSubtract(Mat& src, int TemplateNum) //数字识别
 int main()
 {
 
-        Mat image = imread("D:\\qq\\qq\\qq\\300.jpg", 1);
+        Mat image = imread("D:\\qq\\qq\\qq\\200.jpg", 1);
         namedWindow(wndname, 1);
         vector<vector<Point> > squares;
         findSquares(image, squares);
@@ -386,10 +386,12 @@ int main()
                 Point p2;
                 p2.x = zxx;
                 p2.y = zxy;
-                if (serieNum == 3)
+                if (serieNum == 2)
                 {
                     std::printf("数字中心横坐标=%d\n", zxx);
                     std::printf("数字中心纵坐标=%d\n", zxy);
+                    std::printf("矩形长=%d\n", chang);
+                    std::printf("矩形宽=%d\n", kuan);
                     circle(image, p2, 10, Scalar(255, 0, 0), -1);
                     cv::imshow(".", image);
                     waitKey(0);
